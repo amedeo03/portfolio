@@ -43,7 +43,7 @@ export const EXPERIENCE = [
   },
   {
     title: 'Finalist at Ifab 4 Next Generation Talents 2026',
-    period: 'Mar 2026 - Jun 2026',
+    period: 'Mar 2026 - May 2026',
     company: 'Lavazza',
     companyHref: 'https://www.lavazza.it/',
     companyColor: '#4b6aa0',
