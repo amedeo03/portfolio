@@ -15,7 +15,7 @@ export const SITE = {
   /** Href for the primary "Say hi" CTA */
   emailHref: 'mailto:amedeomarino03@gmail.com',
   /** Href for the CV download */
-  cvHref: '/amedeo_marino_cv.pdf',
+  cvHref: 'https://raw.githubusercontent.com/amedeo03/portfolio/main/public/amedeo_marino_cv.pdf',
 };
 
 // ─── Navigation links ─────────────────────────────────────────────────────────
