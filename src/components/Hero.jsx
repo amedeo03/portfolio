@@ -62,9 +62,10 @@ export const Hero = () => {
 
               {personal.resumeUrl && (
                 <a
-                  href={personal.resumeUrl}
+                  href={getLocalized(personal.resumeUrl)}
                   target="_blank"
                   rel="noreferrer"
+                  download
                   className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl glass-panel text-slate-400 light:text-slate-600 hover:text-slate-200 light:hover:text-slate-900 transition-colors"
                   title="Download Resume PDF"
                 >

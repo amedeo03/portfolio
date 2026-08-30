@@ -17,7 +17,10 @@ export const portfolioConfig = {
     },
     location: "Turin, Italy / Remote Worldwide",
     email: "amedeomarino03@gmail.com",
-    resumeUrl: "https://raw.githubusercontent.com/amedeo03/portfolio/main/public/amedeo_marino_cv.pdf",
+    resumeUrl: {
+      en: "./amedeo_marino_cv_en.pdf",
+      it: "./amedeo_marino_cv_it.pdf"
+    },
     bio: {
       en: "Software Engineering Master Student at Politecnico di Torino, passionate about backend engineering - code, architecture, design and optimization.",
       it: "Studente Magistrale di Ingegneria del Software al Politecnico di Torino appassionato di ingegnerizzazione del backend - codice, architettura, design ed ottimizzazione."
