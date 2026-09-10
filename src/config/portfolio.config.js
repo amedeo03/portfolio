@@ -207,7 +207,7 @@ export const portfolioConfig = {
       },
       image: "./assets/georust.png",
       techStack: ["Rust", "Tokio", "WebSocket"],
-      githubUrl: "https://github.com/PdS2026/G19"
+      githubUrl: "https://github.com/amedeo03/georust"
     },
     {
       id: "project-3",
