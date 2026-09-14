@@ -84,6 +84,7 @@
 \titleformat{\section}
   {\scshape\large}{}
     {0em}{\color{blue}}[\color{black}\titlerule\vspace{0pt}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
 %-------------------------------------
 
 
@@ -105,7 +106,7 @@
 }
 
 % commands to start and end itemization of resumeItem, rightmargin set to 0.11in to avoid the overflow of resumetItem beyond whatever resumeItemHeading is being used
-\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in, itemsep=0pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 % resumeSectionType renders a bolded type to be used under a section, used as skill type here, middle element is used to keep ":"s in the same vertical line
@@ -147,7 +148,7 @@
 
 % commands to start and end itemization of resumeQuadHeading, lefmargin for left indent of 0.15in for resumeItems
 \newcommand{\resumeHeadingListStart}{
-  \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=3pt, topsep=0pt, parsep=0pt, partopsep=0pt]
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
 %-------------------------------------------
@@ -171,17 +172,38 @@
 %-----------SUMMARY--------------------------
 \section{Software Engineering Master Student}
 \small{
-  Dedicated Software Engineering Master's student at Politecnico di Torino with a strong focus on backend engineering, system architecture, and code optimization. Specializing in enterprise-level software design, information systems, and system programming to build robust, high-performance applications. Adept at bridging technical implementation with real-world problem-solving, demonstrated through impactful AI development internships and collaborative cross-functional projects.
+  Software Engineering Master's student at Politecnico di Torino focused on backend systems, with experience shipping production API surfaces and LLM-based tooling. Lead a cross-functional team as a finalist in a national innovation challenge with Lavazza.
 }
 %--------------------------------------------
+
+%-----------EDUCATION-------------------------
+\section{Education}
+  \resumeHeadingListStart{}
+    \resumeQuadHeading{Politecnico di Torino}{Turin, Italy}
+    {M.Sc. in Software Engineering}{Sep 2025 -- Present}
+    \resumeItemListStart{}
+      \resumeItem{Relevant coursework: operating systems, system programming, software design and architectures;
+      \\\textit{in progress: distributed programming, cybersecurity, containerization \& orchestration technologies, agile software engineering}}
+    \resumeItemListEnd{}
+    
+    \vspace{5pt}
+    \resumeQuadHeading{Politecnico di Torino}{Turin, Italy}
+    {B.Sc. in Computer Engineering (Final Grade: 93/110)}{Oct 2022 -- Sep 2025}
+    \resumeItemListStart{}
+      \resumeItem{Relevant coursework: algorithms and data structures, complexity analysis, object oriented programming, databases}
+    \resumeItemListEnd{}
+
+  \resumeHeadingListEnd{}
+%---------------------------------------------
 
 %--------------SKILLS------------------------
 \section{Technical Skills}
   \resumeHeadingListStart{}
-    \resumeSectionType{Languages}{:}{Python, Rust, C, ARM assembly, RV assembly, Java, C\#, Go, JavaScript}
-    \resumeSectionType{Frameworks}{:}{DotNet, React, Node.js, Express, FastAPI, N8N}
-    \resumeSectionType{DevOps \& DBs}{:}{Docker, Kubernetes, GitHub Actions, CI/CD Pipelines, Linux/Bash, SQLite, MongoDB}
-    \resumeSectionType{Spoken}{:}{Italian (Native), English (C1)}
+    \resumeSectionType{Languages}{:}{Python, Rust, C, JavaScript, Java, C\#, risc assemblies}
+    \resumeSectionType{Frameworks}{:}{ FastAPI, .NET, React, Node.js, Express, N8N}
+    \resumeSectionType{DevOps}{:}{Docker, Kubernetes, GitHub Actions, CI/CD Pipelines, Linux/Bash}
+    \resumeSectionType{Databases}{:}{Relational (SQLite, PostgreSQL, Microsoft SQL server), NoSQL (MongoDB)}
+    \resumeSectionType{Languages}{:}{Italian (Native), English (C1)}
   \resumeHeadingListEnd{}
 %--------------------------------------------
 
@@ -191,58 +213,43 @@
   \resumeQuadHeading{AI Software Engineer Intern}{Mar 2025 -- Jul 2025}
   {Assist S.P.A.}{Beinasco, Italy}
     \resumeItemListStart{}
-      \resumeItem{Contributed to the design and implementation of an LLM-based chatbot for customer support.}
-      \resumeItem{Designed and implemented REST API surfaces for agent tooling using the DotNet framework in C\#.}
-      \resumeItem{Coordinated agentic workflows using N8N, enabling the agent to review the customer's documents.}
+      \resumeItem{Designed and built an LLM-based chatbot for customer support, expected to save Assist's support team >150 person-hours/week}
+      \resumeItem{Designed and implemented REST API surfaces (C\#, .NET) integrating OpenAI's o3-mini model, cutting inference token costs by \textasciitilde45\% versus the o3 baseline while meeting response-quality requirements}
+      \resumeItem{Coordinated GDPR-compliant agentic workflows in N8N, automating document review for an estimated 150–300 customer requests/week}
     \resumeItemListEnd{}
 
   \resumeQuadHeading{Finalist}{Mar 2026 -- Jun 2026}
   {Ifab 4 Next Generation Talents (Lavazza)}{Turin / Bologna, Italy}
     \resumeItemListStart{}
-      \resumeItem{Designed BeanSight, a market and climate intelligence platform to support coffee supply chain decisions.}
-      \resumeItem{Collaborated directly with Lavazza stakeholders and IT specialists to evaluate technical details.}
-      \resumeItem{Lead my team, coordinating a group of students coming from different technical backgrounds.}
+      \resumeItem{Designed BeanSight, a dashboard aggregating 7 public data sources to deliver descriptive market and climate intelligence for coffee supply chains across Brazil and Vietnam, covering up to 20 years of historical data}
+      \resumeItem{Led a cross-functional team of 6 students from different technical backgrounds, translating technical constraints from/for Lavazza's business and IT stakeholders and demoing the platform, which stakeholders identified as a solution to their reliance on email- and spreadsheet-based workflows}
+      \resumeItem{Advanced to the final round of Ifab 4 Next Generation Talents, competing against teams from 5 other companies}
     \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 %---------------------------------------------
 
-%-----------EDUCATION-------------------------
-\section{Education}
-  \resumeHeadingListStart{}
-    \resumeQuadHeading{Politecnico di Torino}{Turin, Italy}
-    {Master's Degree in Software Engineering}{Sep 2025 -- Present}
-    \resumeItemListStart{}
-      \resumeItem{Relevant coursework: computer architectures, software engineering, cybersecurity}
-    \resumeItemListEnd{}
-    
-    \vspace{5pt}
-    \resumeQuadHeading{Politecnico di Torino}{Turin, Italy}
-    {Bachelor's Degree in Computer Engineering (Final Grade: 93/110)}{Oct 2022 -- Sep 2025}
-    \resumeItemListStart{}
-      \resumeItem{Relevant coursework: algorithms and data structures, object oriented programming, databases}
-    \resumeItemListEnd{}
 
-  \resumeHeadingListEnd{}
-%---------------------------------------------
 
 %-----------PROJECTS--------------------------
 \section{Projects}
   \resumeHeadingListStart{}
-    \resumeTrioHeading{\href{https://github.com/PdS2026/G19}{\uline{GeoRust}}}{Rust, Tokio, WebSocket}{\href{https://github.com/PdS2026/G19}{\uline{Source Code}}}
+    \resumeTrioHeading{\href{https://github.com/amedeo03/georust}{\uline{GeoRust}}}{Rust, Tokio, WebSocket}{\href{https://github.com/amedeo03/georust}{\uline{Source Code}}}
       \resumeItemListStart{}
-        \resumeItem{Asynchronous client-server application written in Rust to keep track of clients' positions.}
-        \resumeItem{Focused heavily on asynchronous execution and overall code performance optimization.}
-      \resumeItemListEnd{}
+        \resumeItem{Built an asynchronous, client-server application in Rust (Tokio) to track clients' real-time positions.}
+        \resumeItem{Benchmarked on consumer-grade desktop hardware with 1 server handling 1,000 concurrent client connections, peaking at just 2.5\% CPU utilization.}
+    \resumeItemListEnd{}
 
     \resumeTrioHeading{\href{https://github.com/amedeo03/EZShop}{\uline{EZShop}}}{Python, FastAPI, SQLite}{\href{https://github.com/amedeo03/EZShop}{\uline{Source Code}}}
       \resumeItemListStart{}
-        \resumeItem{A FastAPI backend REST server designed for a small market.}
-        \resumeItem{Developed through practical application of the Waterfall model.}
+        \resumeItem{Built a FastAPI backend REST server with a relational (SQLite) database for a small market's order and inventory system, developed using the Waterfall model.}
+        \resumeItem{Achieved 96\% test coverage across \textasciitilde650 unit, integration, and end-to-end tests.}
       \resumeItemListEnd{}
       
-    \resumeTrioHeading{\href{https://github.com/amedeo03/Lordran-Express}{\uline{Lordran Express}}}{React, TypeScript, NodeJS}{\href{https://github.com/amedeo03/Lordran-Express}{\uline{Source Code}}}
+    \resumeTrioHeading{Preventive Maintenance Tracker}{Python, FastAPI, PostgreSQL, Streamlit}{\textit{Private Repository}}
       \resumeItemListStart{}
-        \resumeItem{Interactive web minigame developed for the Web Applications I university exam.}
+        \resumeItem{Designed and deployed a preventive maintenance platform for an EV charger manufacturer's service team, scheduling interventions, emailing technicians ahead of deadlines, and tracking completion.}
+        \resumeItem{Independently deployed and managed production infrastructure: Dockerized services on a Hetzner VPS, with DNS and domain management via Cloudflare and Aruba.}
+        \resumeItem{Built for the company's \textasciitilde200 charging sites; received positive feedback from employees as a central alternative to scattered spreadsheet- and email-based tracking, though not yet formally adopted.}
       \resumeItemListEnd{}
   \resumeHeadingListEnd{}
 %--------------------------------------------

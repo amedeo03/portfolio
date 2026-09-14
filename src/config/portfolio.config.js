@@ -22,8 +22,8 @@ export const portfolioConfig = {
       it: "./amedeo_marino_cv_it.pdf"
     },
     bio: {
-      en: "Software Engineering Master Student at Politecnico di Torino, passionate about backend engineering - code, architecture, design and optimization.",
-      it: "Studente Magistrale di Ingegneria del Software al Politecnico di Torino appassionato di ingegnerizzazione del backend - codice, architettura, design ed ottimizzazione."
+      en: "Software Engineering Master's student at Politecnico di Torino focused on backend systems, with experience shipping production API surfaces and LLM-based tooling. Led a cross-functional team as a finalist in a national innovation challenge with Lavazza.",
+      it: "Studente magistrale in Ingegneria del Software presso il Politecnico di Torino, con un forte interesse verso l'ingegneria di backend ed esperienza nello sviluppo di API in produzione e strumenti basati su LLM. Ha guidato un team multidisciplinare come finalista in una competizione nazionale di innovazione con Lavazza."
     },
     socials: {
       github: "https://github.com/amedeo03",
@@ -62,25 +62,25 @@ export const portfolioConfig = {
         it: "Finalista Ifab 4 Next Generation Talents 2026"
       },
       subtitle: "Lavazza",
-      period: { en: "march 2026 - june 2026", it: "marzo 2026 - giugno 2026" },
-      location: "Turin / Bologna, Italy",
+      period: { en: "Mar 2026 - Jun 2026", it: "Mar 2026 - Giu 2026" },
+      location: { en: "Turin / Bologna, Italy", it: "Torino / Bologna, Italia" },
       description: {
-        en: "Participation in the Ifab 4 Next Generation Talents event focussed on innovative projects and young talents.",
-        it: "Partecipazione all'evento Ifab 4 Next Generation Talents concentrato su progetti innovativi svolti da giovani talenti."
+        en: "Finalist in the national innovation challenge Ifab 4 Next Generation Talents, developing an intelligence platform in collaboration with Lavazza.",
+        it: "Finalista nella competizione nazionale di innovazione Ifab 4 Next Generation Talents, con lo sviluppo di una piattaforma di intelligence in collaborazione con Lavazza."
       },
       achievements: {
         en: [
-          "Designed a market and climate intelligence platform designed to support decision-making along the coffee supply chain.",
-          "Talked with directly impacted stakeholders and IT specialists at Lavazza to evaluate technical and non-technical details.",
-          "Worked together with other students from different field of expertise."
+          "Designed BeanSight, a dashboard aggregating 7 public data sources to deliver descriptive market and climate intelligence for coffee supply chains across Brazil and Vietnam, covering up to 20 years of historical data.",
+          "Led a cross-functional team of 6 students from different technical backgrounds, translating technical constraints for Lavazza's business and IT stakeholders and demoing the platform, which stakeholders identified as a solution to their reliance on email- and spreadsheet-based workflows.",
+          "Advanced to the final round of Ifab 4 Next Generation Talents, competing against teams from 5 other companies."
         ],
         it: [
-          "Costruito una piattaforma di intelligence di mercato e climatica per aiutare scelte fatte sulla supply chain del caffé.",
-          "Confronti con gli stakeholder e specialisti IT in Lavazza per discutere dettagli tecnici e non.",
-          "Lavorato in squadra con altri studenti universitari di diverse specializzazioni."
+          "Progettato BeanSight, una dashboard che aggrega 7 fonti di dati pubbliche per fornire analisi descrittive di mercato e clima a supporto decisionale sulla filiera del caffè in Brasile e Vietnam, con una copertura storica fino a 20 anni.",
+          "Guidato un team multidisciplinare di 6 studenti con background tecnici diversi, traducendo vincoli tecnici per gli stakeholder business e IT di Lavazza e presentando la piattaforma, individuata dagli stakeholder come soluzione alla dipendenza da email e fogli di calcolo.",
+          "Ammesso alla fase finale di Ifab 4 Next Generation Talents, in competizione con team di altre 5 aziende."
         ]
       },
-      techStack: ["React", "TypeScript", "Node.js", "Python", "Pandas"]
+      techStack: ["React", "TypeScript", "Python", "Pandas"]
     },
     {
       id: "tl-2",
@@ -90,14 +90,15 @@ export const portfolioConfig = {
         color: "violet"
       },
       title: {
-        en: "Master's Degree in Software Engineering",
+        en: "M.Sc. in Software Engineering",
         it: "Laurea Magistrale in Ingegneria del Software"
       },
       subtitle: "Politecnico di Torino",
-      period: { en: "2025 - Present", it: "2025 - Presente" },
+      period: { en: "Sep 2025 - Present", it: "Set 2025 - Presente" },
+      location: { en: "Turin, Italy", it: "Torino, Italia" },
       description: {
-        en: "Specializing in information systems, project management and enterprise-level software design, while expanding my technical skill stack through the study of system programming, cybersecurity and web development.",
-        it: "Specializzazione in sistemi informativi, gestione progetti e design enterprise. Continua formazione tecnica attraverso lo studio di programmazione a basso livello, cybersicurezza e sviluppo web."
+        en: "Relevant coursework: operating systems, system programming, software design and architectures. In progress: distributed programming, cybersecurity, containerization & orchestration technologies, agile software engineering.",
+        it: "Corsi rilevanti: sistemi operativi, programmazione di sistema, progettazione e architetture software. In corso: programmazione distribuita, cybersecurity, tecnologie di containerizzazione e orchestrazione, ingegneria del software agile."
       }
     },
     {
@@ -108,29 +109,29 @@ export const portfolioConfig = {
         color: "cyan"
       },
       title: {
-        en: "AI Software Engineer",
-        it: "Ingegnere del Software AI"
+        en: "AI Software Engineer Intern",
+        it: "Tirocinante AI Software Engineer"
       },
-      subtitle: "Assist s.p.a.",
-      period: { en: "march 2025 - july 2025", it: "marzo 2025 - luglio 2025" },
-      location: "Beinasco, Italy",
+      subtitle: "Assist S.P.A.",
+      period: { en: "Mar 2025 - Jul 2025", it: "Mar 2025 - Lug 2025" },
+      location: { en: "Beinasco, Italy", it: "Beinasco, Italia" },
       description: {
-        en: "Curricular internship done during the third year of university, consisting of 250 hours of in-office work.",
-        it: "Tirocinio curricolare svolto durante il terzo anno di studi universitari, consistente di 250 ore lavoro in ufficio."
+        en: "Curricular internship focused on customer support automation via LLM and GDPR-compliant agentic workflows.",
+        it: "Tirocinio curricolare incentrato sull'automazione del customer support tramite LLM e flussi di lavoro agentici conformi al GDPR."
       },
       achievements: {
         en: [
-          "Contributed to the design and implementation of an LLM-based chatbot for customer support.",
-          "Designed and implemented REST API surfaces for the agent tooling.",
-          "Took part in regular inside and outside meetings to give and receive feedback on the project."
+          "Designed and built an LLM-based chatbot for customer support, expected to save Assist's support team >150 person-hours/week.",
+          "Designed and implemented REST API surfaces (C#, .NET) integrating OpenAI's o3-mini model, cutting inference token costs by ~45% versus the o3 baseline while meeting response-quality requirements.",
+          "Coordinated GDPR-compliant agentic workflows in N8N, automating document review for an estimated 150–300 customer requests/week."
         ],
         it: [
-          "Contribuito al design ed implementazione di un chatbot basato su LLM per il supporto clienti.",
-          "Progettata l'interfaccia API di accesso ai database tramite chiamate agentiche.",
-          "Preso parte regolarmente a meeting inter e infra aziendali per dare e ricevere feedback sul progetto."
+          "Progettato e sviluppato un chatbot basato su LLM per il supporto clienti, con un risparmio stimato di oltre 150 ore-persona/settimana per il team di supporto di Assist.",
+          "Progettate e implementate interfacce REST API (C#, .NET) integrando il modello o3-mini di OpenAI, riducendo i costi di inferenza di circa il ~45% rispetto al modello o3, mantenendo gli standard di qualità richiesti.",
+          "Coordinati flussi di lavoro agentici conformi al GDPR su N8N, automatizzando la revisione documentale per una stima di 150–300 richieste/settimana."
         ]
       },
-      techStack: ["C#", "DotNet", "N8N", "OpenAI APIs"]
+      techStack: ["C#", ".NET", "OpenAI o3-mini", "N8N", "REST APIs"]
     },
     {
       id: "tl-4",
@@ -140,44 +141,43 @@ export const portfolioConfig = {
         color: "violet"
       },
       title: {
-        en: "Bachelor's Degree in Computer Engineering",
+        en: "B.Sc. in Computer Engineering",
         it: "Laurea Triennale in Ingegneria Informatica"
       },
       subtitle: "Politecnico di Torino",
-      period: { en: "2022 - 2025", it: "2022 - 2025" },
+      period: { en: "Oct 2022 - Sep 2025", it: "Ott 2022 - Set 2025" },
+      location: { en: "Turin, Italy", it: "Torino, Italia" },
       description: {
-        en: "Wide engineering program covering algorithms, data structures and databases.",
-        it: "Ampia formazione ingegneristica di base, con approfondimenti relativi ad algoritmi, strutture dati e database."
+        en: "Relevant coursework: algorithms and data structures, complexity analysis, object oriented programming, databases. Final Grade: 93/110.",
+        it: "Corsi rilevanti: algoritmi e strutture dati, analisi della complessità, programmazione orientata agli oggetti, basi di dati. Voto finale: 93/110."
       }
     }
   ],
 
-  // Competences & Skill Matrix (3 Categories: Languages, Frameworks, DevOps)
+  // Competences & Skill Matrix (Languages, Frameworks, DevOps, Databases)
   competences: [
     {
       category: { en: "Languages", it: "Linguaggi" },
       icon: "Code2",
       skills: [
         "Python",
-        "C",
         "Rust",
-        "ARM assembly",
-        "RV assembly",
+        "C",
+        "JavaScript",
         "Java",
         "C#",
-        "Go",
-        "JavaScript"
+        "RISC Assembly"
       ]
     },
     {
       category: { en: "Frameworks", it: "Framework" },
       icon: "Layers",
       skills: [
-        "DotNet",
+        "FastAPI",
+        ".NET",
         "React",
         "Node.js",
         "Express",
-        "FastAPI",
         "N8N"
       ]
     },
@@ -189,8 +189,16 @@ export const portfolioConfig = {
         "Kubernetes",
         "GitHub Actions",
         "CI/CD Pipelines",
-        "Linux / Bash",
+        "Linux / Bash"
+      ]
+    },
+    {
+      category: { en: "Databases", it: "Database" },
+      icon: "Database",
+      skills: [
+        "PostgreSQL",
         "SQLite",
+        "Microsoft SQL Server",
         "MongoDB"
       ]
     }
@@ -202,8 +210,8 @@ export const portfolioConfig = {
       id: "project-4",
       title: "GeoRust",
       description: {
-        en: "Asynchronous client-server application written in Rust to keep track of clients' positions, with a focus on code performance.",
-        it: "Applicazione client-server asincrona scritta in Rust che permette di tracciare la posizione dei client, con focus sulle performance del codice."
+        en: "Asynchronous client-server application built in Rust (Tokio) to track clients' real-time positions. Benchmarked on consumer-grade desktop hardware with 1 server handling 1,000 concurrent client connections, peaking at just 2.5% CPU utilization.",
+        it: "Applicazione client-server asincrona sviluppata in Rust (Tokio) per il tracciamento in tempo reale della posizione dei client. Testata su hardware desktop consumer con 1 server in grado di gestire 1.000 connessioni simultanee, con picco di CPU pari solo al 2,5%."
       },
       image: "./assets/georust.png",
       techStack: ["Rust", "Tokio", "WebSocket"],
@@ -211,21 +219,20 @@ export const portfolioConfig = {
     },
     {
       id: "project-3",
-      title: "Lordran Express",
+      title: "Preventive Maintenance Tracker",
       description: {
-        en: "Web minigame where the player has to travel through the fictional Lordran region, created for the exam of Web Applications I.",
-        it: "Videogioco web dove il giocatore deve viaggiare attraverso il mondo fantastico di Lordran. Creato per il sostenimento dell'esame di Applicazioni Web I."
+        en: "Preventive maintenance platform for an EV charger manufacturer's service team across ~200 sites, featuring intervention scheduling, automated email alerts, and Dockerized production deployment on Hetzner VPS.",
+        it: "Piattaforma di manutenzione preventiva per il team di assistenza di un produttore di impianti di ricarica EV (~200 siti), con pianificazione degli interventi, notifiche email ai tecnici e infrastruttura Docker su VPS Hetzner."
       },
-      image: "./assets/lordran_express.svg",
-      techStack: ["React", "TypeScript", "NodeJS"],
-      githubUrl: "https://github.com/amedeo03/Lordran-Express"
+      image: "./assets/preventive_maintenance.png",
+      techStack: ["Python", "FastAPI", "PostgreSQL", "Streamlit", "Docker"]
     },
     {
       id: "project-2",
       title: "BeanSight",
       description: {
-        en: "Market and climate intelligence platform designed to support decision-making along the coffee supply chain, integrating climate, logistics, production and geopolitical data.",
-        it: "Piattaforma di intelligence disegnata per supportare le decisioni sulla filiera del caffé Lavazza, intergrante dati climatici, logistici, di produzione e geopolitici."
+        en: "Dashboard aggregating 7 public data sources to deliver descriptive market and climate intelligence for coffee supply chains across Brazil and Vietnam, covering up to 20 years of historical data.",
+        it: "Dashboard che aggrega 7 fonti di dati pubbliche per fornire analisi descrittive di mercato e clima a supporto decisionale sulla filiera del caffè in Brasile e Vietnam, con una copertura storica fino a 20 anni."
       },
       image: "./assets/beansight.jpg",
       techStack: ["React", "TypeScript", "Python", "Pandas"],
@@ -235,8 +242,8 @@ export const portfolioConfig = {
       id: "project-1",
       title: "EZShop",
       description: {
-        en: "A FastAPI backend REST server designed for a small market. Developed through practical application of the Waterfall model.",
-        it: "Un backend FastAPI creato per la gestione di un piccolo negozio. Sviluppato tramite l'applicazione pratica del modello Waterfall."
+        en: "FastAPI backend REST server with a relational (SQLite) database for a small market's order and inventory system, developed using the Waterfall model. Achieved 96% test coverage across ~650 unit, integration, and end-to-end tests.",
+        it: "Backend REST in FastAPI con database relazionale (SQLite) per un sistema di gestione ordini e magazzino per un piccolo market, realizzato con modello Waterfall. Copertura dei test del 96% su ~650 test unitari, di integrazione ed end-to-end."
       },
       image: "./assets/ezshop.png",
       techStack: ["Python", "FastAPI", "SQLite"],
@@ -246,11 +253,11 @@ export const portfolioConfig = {
       id: "project-0",
       title: "AVA",
       description: {
-        en: "Customer care chatbot implementation for Assist SPA, using OpenAI models, N8N and the Dotnet framework.",
-        it: "Chatbot LLM implementato durante il tirocinio in Assist SPA, utilizzando modelli OpenAI, N8N e il framework Dotnet"
+        en: "Customer support chatbot built for Assist S.P.A. integrating OpenAI's o3-mini model with C# .NET REST APIs, cutting inference costs by ~45% and automating GDPR-compliant document review via N8N.",
+        it: "Chatbot per il supporto clienti realizzato per Assist S.P.A. integrando il modello o3-mini di OpenAI con REST API in C# .NET, riducendo i costi di inferenza del ~45% e automatizzando la revisione documentale conforme al GDPR su N8N."
       },
       image: "./assets/ava.png",
-      techStack: ["C#", "Dotnet", "N8N", "OpenAI APIs"],
+      techStack: ["C#", ".NET", "OpenAI o3-mini", "N8N", "REST APIs"]
     }
   ],
 
@@ -281,7 +288,8 @@ export const portfolioConfig = {
       },
       projects: {
         viewDemo: "Live Preview",
-        viewGithub: "View Source"
+        viewGithub: "View Source",
+        privateRepo: "Private Repository"
       },
       contact: {
         directContact: "Direct Contact Info",
@@ -327,7 +335,8 @@ export const portfolioConfig = {
       },
       projects: {
         viewDemo: "Anteprima Live",
-        viewGithub: "Codice Sorgente"
+        viewGithub: "Codice Sorgente",
+        privateRepo: "Repository Privata"
       },
       contact: {
         directContact: "Informazioni di Contatto Diretto",

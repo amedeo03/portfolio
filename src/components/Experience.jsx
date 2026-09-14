@@ -77,12 +77,12 @@ export const Experience = () => {
                       {/* Subtitle + Location */}
                       {(entry.subtitle || entry.location) && (
                         <div className={`flex flex-wrap items-center gap-3 text-sm font-semibold mt-1 ${colors.text}`}>
-                          {entry.subtitle && <span>{entry.subtitle}</span>}
+                          {entry.subtitle && <span>{getLocalized(entry.subtitle)}</span>}
                           {entry.subtitle && entry.location && <span className="text-slate-600">•</span>}
                           {entry.location && (
                             <span className="text-slate-400 flex items-center gap-1">
                               <MapPin className="w-3.5 h-3.5" />
-                              {entry.location}
+                              {getLocalized(entry.location)}
                             </span>
                           )}
                         </div>

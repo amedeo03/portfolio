@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { portfolioConfig } from '../config/portfolio.config';
 import { motion } from 'framer-motion';
-import { Code2, Layers, Cloud, Cpu } from 'lucide-react';
+import { Code2, Layers, Cloud, Database, Cpu } from 'lucide-react';
 
 export const Skills = () => {
   const { t, getLocalized } = useLanguage();
@@ -14,6 +14,7 @@ export const Skills = () => {
       case 'Code2': return <Code2 className="w-5 h-5 text-cyan-400" />;
       case 'Layers': return <Layers className="w-5 h-5 text-violet-400" />;
       case 'Cloud': return <Cloud className="w-5 h-5 text-emerald-400" />;
+      case 'Database': return <Database className="w-5 h-5 text-amber-400" />;
       default: return <Cpu className="w-5 h-5 text-cyan-400" />;
     }
   };
@@ -21,7 +22,7 @@ export const Skills = () => {
   return (
     <section id="skills" className="py-20 md:py-28 relative bg-slate-950/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-100 tracking-tight mb-4">
@@ -29,8 +30,8 @@ export const Skills = () => {
           </h2>
         </div>
 
-        {/* Compact Competences Grid (3 Categories: Languages, Frameworks, DevOps) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Compact Competences Grid (Languages, Frameworks, DevOps, Databases) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {competences.map((cat, idx) => (
             <motion.div
               key={idx}

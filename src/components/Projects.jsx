@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { portfolioConfig } from '../config/portfolio.config';
 import { motion } from 'framer-motion';
-import { FolderGit2, ExternalLink } from 'lucide-react';
+import { FolderGit2, ExternalLink, Lock } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 export const Projects = () => {
@@ -12,7 +12,7 @@ export const Projects = () => {
   return (
     <section id="projects" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-100 tracking-tight mb-4">
@@ -81,7 +81,7 @@ export const Projects = () => {
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     )}
-                    {project.githubUrl && (
+                    {project.githubUrl ? (
                       <a
                         href={project.githubUrl}
                         target="_blank"
@@ -91,6 +91,14 @@ export const Projects = () => {
                       >
                         <GithubIcon className="w-4 h-4" />
                       </a>
+                    ) : (
+                      <span
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-400 bg-slate-900/60 border border-slate-800"
+                        title={t('projects.privateRepo')}
+                      >
+                        <Lock className="w-3.5 h-3.5 text-slate-500" />
+                        <span>{t('projects.privateRepo')}</span>
+                      </span>
                     )}
                   </div>
                 </div>

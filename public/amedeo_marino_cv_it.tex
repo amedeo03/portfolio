@@ -34,7 +34,7 @@
 
 \usepackage[normalem]{ulem} % provides "\ul" (uline) command which will break at line breaks
 
-\usepackage[italian]{babel} % fornisce regole tipografiche per la lingua italiana
+\usepackage[english]{babel} % provides culturally determined typographical rules for wide range of languages
 %-----------------------------------------
 
 \input glyphtounicode % converts glyph names to unicode
@@ -62,7 +62,7 @@
 \addtolength{\topmargin}{-0.5in}
 
 \addtolength{\textwidth}{1.0in} % sets width of text area in the page to one inch
-\addtolength{\textheight}{1.0in} % sets height of text area in the page to one inch
+\addtolength{\textheight}{1.4in} % sets height of text area in the page to one inch
 
 \raggedbottom{} % makes all pages the height of current page, no extra vertical space added
 \raggedright{} % makes all pages the width of current page, no extra horizontal space added
@@ -84,6 +84,7 @@
 \titleformat{\section}
   {\scshape\large}{}
     {0em}{\color{blue}}[\color{black}\titlerule\vspace{0pt}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
 %-------------------------------------
 
 
@@ -105,7 +106,7 @@
 }
 
 % commands to start and end itemization of resumeItem, rightmargin set to 0.11in to avoid the overflow of resumetItem beyond whatever resumeItemHeading is being used
-\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in, itemsep=0pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 % resumeSectionType renders a bolded type to be used under a section, used as skill type here, middle element is used to keep ":"s in the same vertical line
@@ -147,7 +148,7 @@
 
 % commands to start and end itemization of resumeQuadHeading, lefmargin for left indent of 0.15in for resumeItems
 \newcommand{\resumeHeadingListStart}{
-  \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=3pt, topsep=0pt, parsep=0pt, partopsep=0pt]
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
 %-------------------------------------------
@@ -159,7 +160,7 @@
 %-----------CONTACT DETAILS------------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Huge Amedeo Marino \vspace{2pt}} & % row = 1, col = 1
-  Data di nascita: 27 Luglio 2003 $|$ Luogo: Torino, Italia \\ % row = 1, col = 2
+  Data di nascita: 27 luglio 2003 $|$ Residenza: Torino, Italia \\ % row = 1, col = 2
   \href{https://amedeo03.github.io/portfolio/}{\uline{Portfolio}} $|$ % row = 2, col = 1
   \href{https://linkedin.com/in/amedeo-marino/}{\uline{LinkedIn}} $|$ % row = 2, col = 1
   \href{https://github.com/amedeo03}{\uline{GitHub}} & % row = 2, col = 1
@@ -169,18 +170,39 @@
 %--------------------------------------------
 
 %-----------SUMMARY--------------------------
-\section{Studente Magistrale in Ingegneria del Software}
+\section{Profilo}
 \small{
-  Studente Magistrale in Ingegneria del Software al Politecnico di Torino con un forte interesse per l'ingegneria di backend, architettura e ottimizzazione. Specializzato nella progettazione di software di livello enterprise, sistemi informativi e programmazione di sistema per la costruzione di applicazioni robuste e ad alte prestazioni. Abile nel combinare l'implementazione tecnica con la risoluzione di problemi reali, come dimostrato in tirocini di sviluppo AI di grande impatto e in progetti collaborativi interfunzionali.
+  Studente magistrale in Ingegneria del Software presso il Politecnico di Torino, con un forte intersse verso l'ingegneria di backend ed esperienza nello sviluppo di API in produzione e strumenti basati su LLM. Ha guidato un team multidisciplinare come finalista in una competizione nazionale di innovazione con Lavazza.
 }
 %--------------------------------------------
+
+%-----------EDUCATION-------------------------
+\section{Formazione}
+  \resumeHeadingListStart{}
+    \resumeQuadHeading{Politecnico di Torino}{Torino, Italia}
+    {Laurea Magistrale in Ingegneria del Software}{Set 2025 -- Presente}
+    \resumeItemListStart{}
+      \resumeItem{Corsi rilevanti: sistemi operativi, programmazione di sistema, progettazione e architetture software;
+      \\\textit{in corso: programmazione distribuita, cybersecurity, tecnologie di containerizzazione e orchestrazione, ingegneria del software agile}}
+    \resumeItemListEnd{}
+    
+    \vspace{5pt}
+    \resumeQuadHeading{Politecnico di Torino}{Torino, Italia}
+    {Laurea Triennale in Ingegneria Informatica (Voto finale: 93/110)}{Ott 2022 -- Set 2025}
+    \resumeItemListStart{}
+      \resumeItem{Corsi rilevanti: algoritmi e strutture dati, analisi della complessità, programmazione orientata agli oggetti, basi di dati}
+    \resumeItemListEnd{}
+
+  \resumeHeadingListEnd{}
+%---------------------------------------------
 
 %--------------SKILLS------------------------
 \section{Competenze Tecniche}
   \resumeHeadingListStart{}
-    \resumeSectionType{Linguaggi}{:}{Python, Rust, C, ARM assembly, RV assembly, Java, C\#, Go, JavaScript}
-    \resumeSectionType{Framework}{:}{DotNet, React, Node.js, Express, FastAPI, N8N}
-    \resumeSectionType{DevOps \& DB}{:}{Docker, Kubernetes, GitHub Actions, CI/CD Pipelines, Linux/Bash, SQLite, MongoDB}
+    \resumeSectionType{Linguaggi}{:}{Python, Rust, C, JavaScript, Java, C\#, assembly RISC}
+    \resumeSectionType{Framework}{:}{ FastAPI, .NET, React, Node.js, Express, N8N}
+    \resumeSectionType{DevOps}{:}{Docker, Kubernetes, GitHub Actions, CI/CD Pipelines, Linux/Bash}
+    \resumeSectionType{Database}{:}{Relazionali (SQLite, PostgreSQL, Microsoft SQL Server), NoSQL (MongoDB)}
     \resumeSectionType{Lingue}{:}{Italiano (Madrelingua), Inglese (C1)}
   \resumeHeadingListEnd{}
 %--------------------------------------------
@@ -188,61 +210,46 @@
 %-----------EXPERIENCE-----------------------
 \section{Esperienza e Riconoscimenti}
 \resumeHeadingListStart{}
-  \resumeQuadHeading{Tirocinante AI Software Engineer}{Mar 2025 -- Lug 2025}
+  \resumeQuadHeading{AI Software Engineer Intern}{Mar 2025 -- Lug 2025}
   {Assist S.P.A.}{Beinasco, Italia}
     \resumeItemListStart{}
-      \resumeItem{Contribuito alla progettazione e implementazione di un chatbot basato su LLM per il supporto clienti.}
-      \resumeItem{Progettato e implementato interfacce API REST per l'accesso ai tool dell'agente utilizzando il framework DotNet in C\#.}
-      \resumeItem{Coordinato flussi di lavoro agentici utilizzando N8N, consentendo all'agente di analizzare i documenti del cliente.}
+      \resumeItem{Progettato e sviluppato un chatbot basato su LLM per il supporto clienti, con un risparmio stimato di oltre 150 ore-persona/settimana per il team di supporto di Assist}
+      \resumeItem{Progettate e implementate interfacce REST API (C\#, .NET) integrando il modello o3-mini di OpenAI, riducendo i costi di inferenza di circa il \textasciitilde45\% rispetto al modello o3, mantenendo gli standard di qualità richiesti}
+      \resumeItem{Coordinati flussi di lavoro agentici conformi al GDPR su N8N, automatizzando la revisione documentale per una stima di 150–300 richieste/settimana}
     \resumeItemListEnd{}
 
   \resumeQuadHeading{Finalista}{Mar 2026 -- Giu 2026}
   {Ifab 4 Next Generation Talents (Lavazza)}{Torino / Bologna, Italia}
     \resumeItemListStart{}
-      \resumeItem{Progettato BeanSight, una piattaforma di intelligence climatica e di mercato a supporto decisionale sulla filiera del caffè.}
-      \resumeItem{Collaborato direttamente con gli stakeholder e gli specialisti IT di Lavazza per valutare i dettagli tecnici.}
-      \resumeItem{Coordinato il mio team, un gruppo di studenti provenienti da diversi percorsi universitari.}
+      \resumeItem{Progettato BeanSight, una dashboard che aggrega 7 fonti di dati pubbliche per fornire analisi descrittive di mercato e clima a supporto decisionali sulla filiera del caffè in Brasile e Vietnam, con una copertura storica fino a 20 anni}
+      \resumeItem{Guidato un team multidisciplinare di 6 studenti con background tecnici diversi, traducendo vincoli tecnici per gli stakeholder business e IT di Lavazza e presentando la piattaforma, individuata dagli stakeholder come soluzione alla dipendenza lavorativa da email e fogli di calcolo}
+      \resumeItem{Ammesso alla fase finale di Ifab 4 Next Generation Talents, in competizione con team di altre 5 aziende}
     \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 %---------------------------------------------
 
-%-----------EDUCATION-------------------------
-\section{Istruzione}
-  \resumeHeadingListStart{}
-    \resumeQuadHeading{Politecnico di Torino}{Torino, Italia}
-    {Laurea Magistrale in Ingegneria del Software}{Set 2025 -- Presente}
-    \resumeItemListStart{}
-      \resumeItem{Corsi rilevanti: architetture dei calcolatori, ingegneria del software, cybersicurezza}
-    \resumeItemListEnd{}
-    
-    \vspace{5pt}
-    \resumeQuadHeading{Politecnico di Torino}{Torino, Italia}
-    {Laurea Triennale in Ingegneria Informatica (Voto finale: 93/110)}{Ott 2022 -- Set 2025}
-    \resumeItemListStart{}
-      \resumeItem{Corsi rilevanti: algoritmi e strutture dati, programmazione orientata agli oggetti, basi di dati}
-    \resumeItemListEnd{}
 
-  \resumeHeadingListEnd{}
-%---------------------------------------------
 
 %-----------PROJECTS--------------------------
 \section{Progetti}
   \resumeHeadingListStart{}
-    \resumeTrioHeading{\href{https://github.com/PdS2026/G19}{\uline{GeoRust}}}{Rust, Tokio, WebSocket}{\href{https://github.com/PdS2026/G19}{\uline{Codice Sorgente}}}
+    \resumeTrioHeading{\href{https://github.com/amedeo03/georust}{\uline{GeoRust}}}{Rust, Tokio, WebSocket}{\href{https://github.com/amedeo03/georust}{\uline{Codice Sorgente}}}
       \resumeItemListStart{}
-        \resumeItem{Applicazione client-server asincrona scritta in Rust per tracciare le posizioni dei client.}
-        \resumeItem{Focus sull'esecuzione asincrona e sull'ottimizzazione complessiva delle prestazioni del codice.}
-      \resumeItemListEnd{}
+        \resumeItem{Sviluppata un'applicazione client-server asincrona in Rust (Tokio) per il tracciamento in tempo reale della posizione dei client.}
+        \resumeItem{Testata su hardware desktop consumer con 1 server in grado di gestire 1.000 connessioni client simultanee, con un utilizzo di CPU di picco pari solo al 2,5\%.}
+    \resumeItemListEnd{}
 
     \resumeTrioHeading{\href{https://github.com/amedeo03/EZShop}{\uline{EZShop}}}{Python, FastAPI, SQLite}{\href{https://github.com/amedeo03/EZShop}{\uline{Codice Sorgente}}}
       \resumeItemListStart{}
-        \resumeItem{Server REST FastAPI progettato per la gestione di un piccolo negozio.}
-        \resumeItem{Sviluppato tramite l'applicazione pratica del modello Waterfall.}
+        \resumeItem{Sviluppato un backend REST in FastAPI con database relazionale (SQLite) per un sistema di gestione ordini e magazzino per un piccolo market, realizzato seguendo il modello Waterfall.}
+        \resumeItem{Raggiunta una copertura dei test del 96\% tramite circa 650 unit, integration ed end-to-end test.}
       \resumeItemListEnd{}
       
-    \resumeTrioHeading{\href{https://github.com/amedeo03/Lordran-Express}{\uline{Lordran Express}}}{React, TypeScript, NodeJS}{\href{https://github.com/amedeo03/Lordran-Express}{\uline{Codice Sorgente}}}
+    \resumeTrioHeading{Preventive Maintenance Tracker}{Python, FastAPI, PostgreSQL, Streamlit}{\textit{Repository Privata}}
       \resumeItemListStart{}
-        \resumeItem{Minigioco web interattivo sviluppato per l'esame universitario di Applicazioni Web I.}
+        \resumeItem{Progettata ed implementata una piattaforma di manutenzione preventiva per il team di assistenza di un produttore di impianti di ricarica EV, con pianificazione degli interventi, notifiche email ai tecnici in prossimità delle scadenze e tracciamento del lavoro svolto.}
+        \resumeItem{Distribuita e gestita in autonomia l'infrastruttura di produzione: servizi containerizzati con Docker su VPS Hetzner, con gestione di DNS e dominio tramite Cloudflare e Aruba.}
+        \resumeItem{Realizzata per i circa 200 siti di ricarica dell'azienda; ha ricevuto un riscontro positivo dai dipendenti come alternativa centralizzata alla gestione frammentata tramite fogli di calcolo ed email, sebbene non ancora adottata formalmente.}
       \resumeItemListEnd{}
   \resumeHeadingListEnd{}
 %--------------------------------------------
