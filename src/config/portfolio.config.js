@@ -15,7 +15,7 @@ export const portfolioConfig = {
       en: "Software Engineering Master Student",
       it: "Studente Magistrale di Ingegneria del Software"
     },
-    location: "Turin, Italy / Remote Worldwide",
+    location: "Turin, Italy / Open to Relocation",
     email: "amedeomarino03@gmail.com",
     resumeUrl: {
       en: "./amedeo_marino_cv_en.pdf",
