@@ -169,7 +169,7 @@ export const Contact = () => {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white font-bold text-sm shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full py-4 rounded-xl bg-black text-white border border-white/20 hover:bg-white hover:text-black hover:border-white font-bold text-sm shadow-lg shadow-black/30 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   {state.submitting ? (
                     <span>{t('contact.sendingButton')}</span>

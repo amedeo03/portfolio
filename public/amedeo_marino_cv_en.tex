@@ -3,38 +3,22 @@
 % Author : Nanu Panchamurthy
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
-
-% Hope this resume template helps you land an awesome job. If you found this helpful, please consider starring the github repo here, .
 %-------------------------
-
-
 
 %------------PACKAGES----------------
 \documentclass[a4paper,11pt]{article}
 
-\usepackage{verbatim} % reimplements the "verbatim" and "verbatim*" environments
-
-\usepackage{titlesec} % provides an interface to sectioning commands i.e. custom elements
-
-\usepackage{color} % provides both foreground and background color management
-
-\usepackage{enumitem} % provides control over enumerate, itemize and description
-
-\usepackage{fancyhdr} % provides extensive facilities for constructing headers, footers and also controlling their use
-
-\usepackage{tabularx} % defines an environment tabularx, extension of "tabular" with an extra designator x, paragraph like column whose width automatically expands to fill the width of the environment
-
-\usepackage{latexsym} % provides mathematical symbols
-
-\usepackage{marvosym} % provides martin vogel's symbol font which contains various symbols
-
-\usepackage[empty]{fullpage} % sets margins to one inch and removes headers, footers etc..
-
-\usepackage[hidelinks]{hyperref} % removes color and shadow of hyperlinks
-
-\usepackage[normalem]{ulem} % provides "\ul" (uline) command which will break at line breaks
-
-\usepackage[english]{babel} % provides culturally determined typographical rules for wide range of languages
+\usepackage{verbatim}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{latexsym}
+\usepackage{marvosym}
+\usepackage[hidelinks]{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage[english]{babel}
 %-----------------------------------------
 
 \input glyphtounicode % converts glyph names to unicode
@@ -42,216 +26,186 @@
 
 %----------FONT OPTIONS-------------------
 \usepackage[default]{sourcesans} % uses the font source sans pro
-\urlstyle{same} % changes url font from default urlfont to font being used by the document
+\urlstyle{same}
 %-----------------------------------------
 
+%----------PAGE GEOMETRY------------------
+% Uniform margins; \flushbottom + stretchable glue (see below) spreads the
+% content evenly so the page is filled top to bottom.
+\usepackage[a4paper, left=1.6cm, right=1.6cm, top=1.3cm, bottom=1.3cm, nohead, nofoot]{geometry}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0in}
+\flushbottom{}
+\raggedright{}
+\setlength{\parindent}{0pt}
+%------------------------------------------
 
-%----------MARGIN OPTIONS-----------------
-\pagestyle{fancy} % set page style to one configured by fancyhdr
-\fancyhf{} % clear all header and footer fields
-
-\renewcommand{\headrulewidth}{0in} % sets thickness of linerule under header to zero
-\renewcommand{\footrulewidth}{0in} % sets thickness of linerule over footer to zero
-
-\setlength{\tabcolsep}{0in} % sets thickness of column separator in tables to zero
-
-% origin of the document is one inch from the top and from and the left
-% oddsidemargin and evensidemargin both refer to the left margin
-% right margin is indirectly set using oddsidemargin
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\topmargin}{-0.5in}
-
-\addtolength{\textwidth}{1.0in} % sets width of text area in the page to one inch
-\addtolength{\textheight}{1.0in} % sets height of text area in the page to one inch
-
-\raggedbottom{} % makes all pages the height of current page, no extra vertical space added
-\raggedright{} % makes all pages the width of current page, no extra horizontal space added
+%----------FONT SIZES---------------------
+% Change these two to scale the whole resume.
+\newcommand{\bodyfs}{\fontsize{10.3pt}{12.5pt}\selectfont}   % bullets, skills, profile
+\newcommand{\headfs}{\fontsize{10.8pt}{13pt}\selectfont}   % entry titles
+\newcommand{\subfs}{\fontsize{9.5pt}{11.5pt}\selectfont}   % italic sub-lines
 %------------------------------------------
 
 %--------SECTIONING COMMANDS---------
-% \titleformat{<command>}
-%   [<shape>]{<format>}{<label>}{<sep>}
-%     {<before-code>}[<after-code>]
-
-% command is the sectioning command to be redefined
-% shape is the style of the font; scshape stands for small caps style
-% format is the format to be applied to whole title- label and text; absent here
-% label defines the label
-% sep is the horizontal separation between label and title body
-% before-code is the code to be executed before
-% after-code is the code to be executed after
-
+% spacing: before = natural plus stretch, after = natural plus stretch
 \titleformat{\section}
   {\scshape\large}{}
     {0em}{\color{blue}}[\color{black}\titlerule\vspace{0pt}]
-\titlespacing*{\section}{0pt}{7pt}{4pt}
+\titlespacing*{\section}{0pt}{6pt}{4pt}
 %-------------------------------------
 
-
 %--------REDEFINITIONS----------------
-% redefines the style of the bullet point
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-% redefines the underline depth to 2pt
 \renewcommand{\ULdepth}{2pt}
 %-------------------------------------
 
-
 %--------CUSTOM COMMANDS--------------
-%\vspace{} defines a vertical space of given size, modifying this in custom commands can help stretch or shrink resume to remove or add content
-
 % resumeItem renders a bullet point
 \newcommand{\resumeItem}[1]{
-  \item\small{#1}
+  \item\bodyfs #1
 }
 
-% commands to start and end itemization of resumeItem, rightmargin set to 0.11in to avoid the overflow of resumetItem beyond whatever resumeItemHeading is being used
-\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in, itemsep=0pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.4em, rightmargin=0pt, itemsep=1.5pt plus 1pt, topsep=2.5pt plus 1pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
-% resumeSectionType renders a bolded type to be used under a section, used as skill type here, middle element is used to keep ":"s in the same vertical line
+% resumeSectionType: bold label in a fixed-width box so the ":" line up
 \newcommand{\resumeSectionType}[3]{
-  \item\begin{tabular*}{0.96\textwidth}[t]{
-    p{0.15\linewidth}p{0.02\linewidth}p{0.81\linewidth}
-  }
-    \textbf{#1} & #2 & #3
-  \end{tabular*}\vspace{-2pt}
+  \item\bodyfs\makebox[0.15\linewidth][l]{\textbf{#1}}#2\hspace{0.7em}#3
 }
 
-% resumeTrioHeading renders three elements in three columns with second element being italicized and first element bolded, can be used for projects with three elements
+% resumeTrioHeading: three elements, second italicised, first bold
 \newcommand{\resumeTrioHeading}[3]{
-  \item\small{
-    \begin{tabular*}{0.96\textwidth}[t]{
+  \item\bodyfs
+    \begin{tabular*}{\linewidth}[t]{
       l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r
     }
       \textbf{#1} & \textit{#2} & #3
     \end{tabular*}
-  }
 }
 
-% resumeQuadHeading renders four elements in a two columns with the second row being italicized and first element of first row bolded, can be used for experience and projects with four elements
+% resumeQuadHeading: two rows, first bold, second italic
 \newcommand{\resumeQuadHeading}[4]{
-  \item
-  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
+  \item\headfs
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\bodyfs #2} \\
+    \textit{\subfs #3} & \textit{\subfs #4} \\
   \end{tabular*}
 }
 
-% resumeQuadHeadingChild renders the second row of resumeQuadHeading, can be used for experience if different roles in the same company need to added
 \newcommand{\resumeQuadHeadingChild}[2]{
   \item
-  \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{\small#1} & {\small#2} \\
   \end{tabular*}
 }
 
-% commands to start and end itemization of resumeQuadHeading, lefmargin for left indent of 0.15in for resumeItems
+% itemsep carries the stretch that distributes spare vertical space
 \newcommand{\resumeHeadingListStart}{
-  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=3pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+  \begin{itemize}[leftmargin=0pt, label={}, itemsep=6pt plus 3pt minus 1pt, topsep=0pt, parsep=0pt, partopsep=0pt]
 }
 \newcommand{\resumeHeadingListEnd}{\end{itemize}}
+% tighter list for the skills rows
+\newcommand{\resumeSkillListStart}{
+  \begin{itemize}[leftmargin=0pt, label={}, itemsep=3pt plus 1pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+}
 %-------------------------------------------
 
 %__________________RESUME____________________
-\setlength{\footskip}{4.08003pt} % added just to fix warning
 \begin{document}
 
 %-----------CONTACT DETAILS------------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Huge Amedeo Marino \vspace{2pt}} & % row = 1, col = 1
-  Birthdate: 27 July 2003 $|$ Location: Turin, Italy \\ % row = 1, col = 2
-  \href{https://amedeo03.github.io/portfolio/}{\uline{Portfolio}} $|$ % row = 2, col = 1
-  \href{https://linkedin.com/in/amedeo-marino/}{\uline{LinkedIn}} $|$ % row = 2, col = 1
-  \href{https://github.com/amedeo03}{\uline{GitHub}} & % row = 2, col = 1
-  Email: \href{mailto:amedeomarino03@gmail.com}{\uline{amedeomarino03@gmail.com}} $|$ % row = 2, col = 2
-  Mobile: (+39) 3886306778 \\ % row = 2, col = 2
+  \textbf{\Huge Amedeo Marino \vspace{2pt}} & \bodyfs
+  Date of birth: 27 July 2003 $|$ Residence: Turin, Italy \\
+  \bodyfs
+  \href{https://amedeo03.github.io/portfolio/}{\uline{Portfolio}} $|$
+  \href{https://linkedin.com/in/amedeo-marino/}{\uline{LinkedIn}} $|$
+  \href{https://github.com/amedeo03}{\uline{GitHub}} & \bodyfs
+  Email: \href{mailto:amedeomarino03@gmail.com}{\uline{amedeomarino03@gmail.com}} $|$
+  Phone: (+39) 3886306778 \\
 \end{tabular*}
 %--------------------------------------------
 
 %-----------SUMMARY--------------------------
-\section{Software Engineering Master Student}
-\small{
-  Software Engineering Master's student at Politecnico di Torino focused on backend systems, with experience shipping production API surfaces and LLM-based tooling. Lead a cross-functional team as a finalist in a national innovation challenge with Lavazza.
-}
+\vspace{4pt}
+\section{Profile}
+{\bodyfs
+  Master's student in Software Engineering at Politecnico di Torino, focused on distributed cloud infrastructure and the development of LLM-integrated systems. Currently looking for an internship with a master's thesis in cloud engineering, where I can also apply my experience with generative AI, starting from March 2027. Open to relocation.\par}
 %--------------------------------------------
 
 %-----------EDUCATION-------------------------
+\vfill
 \section{Education}
   \resumeHeadingListStart{}
     \resumeQuadHeading{Politecnico di Torino}{Turin, Italy}
-    {M.Sc. in Software Engineering}{Sep 2025 -- Present}
+    {MSc in Software Engineering (Expected grade: 105/110)}{Sep 2025 -- Present}
     \resumeItemListStart{}
-      \resumeItem{Relevant coursework: operating systems, system programming, software design and architectures;
-      \\\textit{in progress: distributed programming, cybersecurity, containerization \& orchestration technologies, agile software engineering}}
+      \resumeItem{Relevant coursework: system programming, software design and architecture;
+      \\\textit{in progress: distributed systems, containerization and orchestration technologies, cybersecurity, ``agile'' methodologies}}
     \resumeItemListEnd{}
-    
-    \vspace{5pt}
+
     \resumeQuadHeading{Politecnico di Torino}{Turin, Italy}
-    {B.Sc. in Computer Engineering (Final Grade: 93/110)}{Oct 2022 -- Sep 2025}
+    {BSc in Computer Engineering (Final grade: 93/110)}{Oct 2022 -- Sep 2025}
     \resumeItemListStart{}
-      \resumeItem{Relevant coursework: algorithms and data structures, complexity analysis, object oriented programming, databases}
+      \resumeItem{Relevant coursework: algorithms and data structures, operating systems, object-oriented programming, databases}
     \resumeItemListEnd{}
 
   \resumeHeadingListEnd{}
 %---------------------------------------------
 
 %--------------SKILLS------------------------
+\vfill
 \section{Technical Skills}
-  \resumeHeadingListStart{}
-    \resumeSectionType{Languages}{:}{Python, Rust, C, JavaScript, Java, C\#, risc assemblies}
-    \resumeSectionType{Frameworks}{:}{ FastAPI, .NET, React, Node.js, Express, N8N}
+  \resumeSkillListStart{}
+    \resumeSectionType{Programming}{:}{Python, Rust, C, JavaScript/TypeScript, Java, C\#, MIPS, RISC-V and ARM assembly}
+    \resumeSectionType{Frameworks}{:}{FastAPI, .NET, React, Node.js, Express, N8N}
     \resumeSectionType{DevOps}{:}{Docker, Kubernetes, GitHub Actions, CI/CD Pipelines, Linux/Bash}
-    \resumeSectionType{Databases}{:}{Relational (SQLite, PostgreSQL, Microsoft SQL server), NoSQL (MongoDB)}
+    \resumeSectionType{Databases}{:}{Relational (SQLite, PostgreSQL, Microsoft SQL Server), NoSQL (MongoDB)}
     \resumeSectionType{Languages}{:}{Italian (Native), English (C1)}
   \resumeHeadingListEnd{}
 %--------------------------------------------
 
 %-----------EXPERIENCE-----------------------
-\section{Experience \& Awards}
+\vfill
+\section{Experience and Awards}
 \resumeHeadingListStart{}
   \resumeQuadHeading{AI Software Engineer Intern}{Mar 2025 -- Jul 2025}
   {Assist S.P.A.}{Beinasco, Italy}
     \resumeItemListStart{}
-      \resumeItem{Designed and built an LLM-based chatbot for customer support, expected to save Assist's support team >150 person-hours/week}
-      \resumeItem{Designed and implemented REST API surfaces (C\#, .NET) integrating OpenAI's o3-mini model, cutting inference token costs by \textasciitilde45\% versus the o3 baseline while meeting response-quality requirements}
-      \resumeItem{Coordinated GDPR-compliant agentic workflows in N8N, automating document review for an estimated 150–300 customer requests/week}
+      \resumeItem{Designed and developed an LLM-based customer support chatbot with related API tooling implemented in .NET, with estimated savings of over 150 person-hours per week for Assist's support team.}
+      \resumeItem{Orchestrated GDPR-compliant agentic workflows on N8N, automating document review for an estimated 150--300 requests per week using low-cost OpenAI o3-mini models.}
     \resumeItemListEnd{}
 
   \resumeQuadHeading{Finalist}{Mar 2026 -- Jun 2026}
   {Ifab 4 Next Generation Talents (Lavazza)}{Turin / Bologna, Italy}
     \resumeItemListStart{}
-      \resumeItem{Designed BeanSight, a dashboard aggregating 7 public data sources to deliver descriptive market and climate intelligence for coffee supply chains across Brazil and Vietnam, covering up to 20 years of historical data}
-      \resumeItem{Led a cross-functional team of 6 students from different technical backgrounds, translating technical constraints from/for Lavazza's business and IT stakeholders and demoing the platform, which stakeholders identified as a solution to their reliance on email- and spreadsheet-based workflows}
-      \resumeItem{Advanced to the final round of Ifab 4 Next Generation Talents, competing against teams from 5 other companies}
+      \resumeItem{Designed BeanSight, a dashboard that aggregates public data sources to provide descriptive analytics supporting decision-making in the coffee supply chain, reaching the final stage of Ifab 4 Next Generation Talents.}
+      \resumeItem{Led a multidisciplinary team of 6 students, communicating with technical and non-technical stakeholders, to deliver a product that removed the dependency on slow email- and spreadsheet-based processes.}
     \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 %---------------------------------------------
 
-
-
 %-----------PROJECTS--------------------------
+\vfill
 \section{Projects}
   \resumeHeadingListStart{}
     \resumeTrioHeading{\href{https://github.com/amedeo03/georust}{\uline{GeoRust}}}{Rust, Tokio, WebSocket}{\href{https://github.com/amedeo03/georust}{\uline{Source Code}}}
       \resumeItemListStart{}
-        \resumeItem{Built an asynchronous, client-server application in Rust (Tokio) to track clients' real-time positions.}
-        \resumeItem{Benchmarked on consumer-grade desktop hardware with 1 server handling 1,000 concurrent client connections, peaking at just 2.5\% CPU utilization.}
-    \resumeItemListEnd{}
+        \resumeItem{Developed an asynchronous client-server application in Rust (Tokio) for real-time client location tracking. Tested on consumer desktop hardware, where a single server handled 1,000 simultaneous client connections with a peak CPU usage of 2.5\%.}
+      \resumeItemListEnd{}
 
     \resumeTrioHeading{\href{https://github.com/amedeo03/EZShop}{\uline{EZShop}}}{Python, FastAPI, SQLite}{\href{https://github.com/amedeo03/EZShop}{\uline{Source Code}}}
       \resumeItemListStart{}
-        \resumeItem{Built a FastAPI backend REST server with a relational (SQLite) database for a small market's order and inventory system, developed using the Waterfall model.}
-        \resumeItem{Achieved 96\% test coverage across \textasciitilde650 unit, integration, and end-to-end tests.}
+        \resumeItem{Developed a REST backend for a store sales and inventory management system, built following the Waterfall model. Achieved 96\% test coverage with about 650 end-to-end, integration and unit tests.}
       \resumeItemListEnd{}
-      
+
     \resumeTrioHeading{Preventive Maintenance Tracker}{Python, FastAPI, PostgreSQL, Streamlit}{\textit{Private Repository}}
       \resumeItemListStart{}
-        \resumeItem{Designed and deployed a preventive maintenance platform for an EV charger manufacturer's service team, scheduling interventions, emailing technicians ahead of deadlines, and tracking completion.}
-        \resumeItem{Independently deployed and managed production infrastructure: Dockerized services on a Hetzner VPS, with DNS and domain management via Cloudflare and Aruba.}
-        \resumeItem{Built for the company's \textasciitilde200 charging sites; received positive feedback from employees as a central alternative to scattered spreadsheet- and email-based tracking, though not yet formally adopted.}
+        \resumeItem{Designed and implemented a maintenance management platform for the support team of electric vehicle charging stations, with scheduling of interventions and tracking of completed work.}
+        \resumeItem{Independently deployed and managed the production infrastructure: containerized services hosted on a Hetzner VPS, with TLS encryption provided by Cloudflare and Certbot; received positive feedback from employees, although not yet formally adopted.}
       \resumeItemListEnd{}
   \resumeHeadingListEnd{}
 %--------------------------------------------
 
-\end{document}
+\end{document}  

@@ -22,8 +22,8 @@ export const portfolioConfig = {
       it: "./amedeo_marino_cv_it.pdf"
     },
     bio: {
-      en: "Software Engineering Master's student at Politecnico di Torino focused on backend systems, with experience shipping production API surfaces and LLM-based tooling. Led a cross-functional team as a finalist in a national innovation challenge with Lavazza.",
-      it: "Studente magistrale in Ingegneria del Software presso il Politecnico di Torino, con un forte interesse verso l'ingegneria di backend ed esperienza nello sviluppo di API in produzione e strumenti basati su LLM. Ha guidato un team multidisciplinare come finalista in una competizione nazionale di innovazione con Lavazza."
+      en: "Master's student in Software Engineering at Politecnico di Torino, focused on distributed cloud infrastructure and the development of LLM-integrated systems. Currently looking for an internship with a master's thesis in cloud engineering, where I can also apply my experience with generative AI, starting from March 2027. Open to relocation.",
+      it: "Studente magistrale in Ingegneria del Software presso il Politecnico di Torino, focalizzato su infrastrutture cloud distribuite e sviluppo di sistemi integrati con LLM. Attualmente in cerca di un tirocinio con tesi magistrale in ambito cloud engineering, dove poter applicare anche la mia esperienza con IA generativa, a partire da marzo 2027. Disponibile al trasferimento."
     },
     socials: {
       github: "https://github.com/amedeo03",
@@ -65,19 +65,15 @@ export const portfolioConfig = {
       period: { en: "Mar 2026 - Jun 2026", it: "Mar 2026 - Giu 2026" },
       location: { en: "Turin / Bologna, Italy", it: "Torino / Bologna, Italia" },
       description: {
-        en: "Finalist in the national innovation challenge Ifab 4 Next Generation Talents, developing an intelligence platform in collaboration with Lavazza.",
-        it: "Finalista nella competizione nazionale di innovazione Ifab 4 Next Generation Talents, con lo sviluppo di una piattaforma di intelligence in collaborazione con Lavazza."
+        en: "Designed BeanSight, a dashboard that aggregates public data sources to provide descriptive analytics supporting decision-making in the coffee supply chain, reaching the final stage of Ifab 4 Next Generation Talents.",
+        it: "Progettato BeanSight, una dashboard che aggrega fonti di dati pubbliche per fornire analisi descrittive a supporto delle decisioni sulla filiera del caffè, arrivando alla fase finale di Ifab 4 Next Generation Talents."
       },
       achievements: {
         en: [
-          "Designed BeanSight, a dashboard aggregating 7 public data sources to deliver descriptive market and climate intelligence for coffee supply chains across Brazil and Vietnam, covering up to 20 years of historical data.",
-          "Led a cross-functional team of 6 students from different technical backgrounds, translating technical constraints for Lavazza's business and IT stakeholders and demoing the platform, which stakeholders identified as a solution to their reliance on email- and spreadsheet-based workflows.",
-          "Advanced to the final round of Ifab 4 Next Generation Talents, competing against teams from 5 other companies."
+          "Led a multidisciplinary team of 6 students, communicating with technical and non-technical stakeholders, to deliver a product that removed the dependency on slow email- and spreadsheet-based processes."
         ],
         it: [
-          "Progettato BeanSight, una dashboard che aggrega 7 fonti di dati pubbliche per fornire analisi descrittive di mercato e clima a supporto decisionale sulla filiera del caffè in Brasile e Vietnam, con una copertura storica fino a 20 anni.",
-          "Guidato un team multidisciplinare di 6 studenti con background tecnici diversi, traducendo vincoli tecnici per gli stakeholder business e IT di Lavazza e presentando la piattaforma, individuata dagli stakeholder come soluzione alla dipendenza da email e fogli di calcolo.",
-          "Ammesso alla fase finale di Ifab 4 Next Generation Talents, in competizione con team di altre 5 aziende."
+          "Guidato un team multidisciplinare di 6 studenti, comunicando con stakeholder tecnici e non, per arrivare ad un prodotto che rimuovesse la dipendenza da lenti processi basati su mail e fogli di calcolo."
         ]
       },
       techStack: ["React", "TypeScript", "Python", "Pandas"]
@@ -97,8 +93,8 @@ export const portfolioConfig = {
       period: { en: "Sep 2025 - Present", it: "Set 2025 - Presente" },
       location: { en: "Turin, Italy", it: "Torino, Italia" },
       description: {
-        en: "Relevant coursework: operating systems, system programming, software design and architectures. In progress: distributed programming, cybersecurity, containerization & orchestration technologies, agile software engineering.",
-        it: "Corsi rilevanti: sistemi operativi, programmazione di sistema, progettazione e architetture software. In corso: programmazione distribuita, cybersecurity, tecnologie di containerizzazione e orchestrazione, ingegneria del software agile."
+        en: "Expected grade: 105/110. Relevant coursework: system programming, software design and architecture. In progress: distributed systems, containerization and orchestration technologies, cybersecurity, agile methodologies.",
+        it: "Voto previsto: 105/110. Corsi rilevanti: programmazione di sistema, progettazione e architetture software. In corso: sistemi distribuiti, tecnologie di containerizzazione e orchestrazione, cybersicurezza, metodologie agile."
       }
     },
     {
@@ -116,22 +112,18 @@ export const portfolioConfig = {
       period: { en: "Mar 2025 - Jul 2025", it: "Mar 2025 - Lug 2025" },
       location: { en: "Beinasco, Italy", it: "Beinasco, Italia" },
       description: {
-        en: "Curricular internship focused on customer support automation via LLM and GDPR-compliant agentic workflows.",
-        it: "Tirocinio curricolare incentrato sull'automazione del customer support tramite LLM e flussi di lavoro agentici conformi al GDPR."
+        en: "Designed and developed an LLM-based customer support chatbot with related API tooling implemented in .NET, with estimated savings of over 150 person-hours per week for Assist's support team.",
+        it: "Progettato e sviluppato un chatbot basato su LLM con relativo tooling API implementato su DotNet, per il supporto clienti, con un risparmio stimato di oltre 150 ore-persona/settimana per il team di supporto di Assist."
       },
       achievements: {
         en: [
-          "Designed and built an LLM-based chatbot for customer support, expected to save Assist's support team >150 person-hours/week.",
-          "Designed and implemented REST API surfaces (C#, .NET) integrating OpenAI's o3-mini model, cutting inference token costs by ~45% versus the o3 baseline while meeting response-quality requirements.",
-          "Coordinated GDPR-compliant agentic workflows in N8N, automating document review for an estimated 150–300 customer requests/week."
+          "Orchestrated GDPR-compliant agentic workflows on N8N, automating document review for an estimated 150–300 requests per week using low-cost OpenAI o3-mini models."
         ],
         it: [
-          "Progettato e sviluppato un chatbot basato su LLM per il supporto clienti, con un risparmio stimato di oltre 150 ore-persona/settimana per il team di supporto di Assist.",
-          "Progettate e implementate interfacce REST API (C#, .NET) integrando il modello o3-mini di OpenAI, riducendo i costi di inferenza di circa il ~45% rispetto al modello o3, mantenendo gli standard di qualità richiesti.",
-          "Coordinati flussi di lavoro agentici conformi al GDPR su N8N, automatizzando la revisione documentale per una stima di 150–300 richieste/settimana."
+          "Coordinati flussi agentici conformi al GDPR su N8N, automatizzando la revisione documentale per una stima di 150--300 richieste/settimana tramite modelli OpenAI o3-mini a basso costo."
         ]
       },
-      techStack: ["C#", ".NET", "OpenAI o3-mini", "N8N", "REST APIs"]
+      techStack: [".NET", "N8N", "OpenAI o3-mini"]
     },
     {
       id: "tl-4",
@@ -148,8 +140,8 @@ export const portfolioConfig = {
       period: { en: "Oct 2022 - Sep 2025", it: "Ott 2022 - Set 2025" },
       location: { en: "Turin, Italy", it: "Torino, Italia" },
       description: {
-        en: "Relevant coursework: algorithms and data structures, complexity analysis, object oriented programming, databases. Final Grade: 93/110.",
-        it: "Corsi rilevanti: algoritmi e strutture dati, analisi della complessità, programmazione orientata agli oggetti, basi di dati. Voto finale: 93/110."
+        en: "Relevant coursework: algorithms and data structures, operating systems, object-oriented programming, databases. Final grade: 93/110.",
+        it: "Corsi rilevanti: algoritmi e strutture dati, sistemi operativi, programmazione ad oggetti, basi di dati. Voto finale: 93/110."
       }
     }
   ],
@@ -210,19 +202,30 @@ export const portfolioConfig = {
       id: "project-4",
       title: "GeoRust",
       description: {
-        en: "Asynchronous client-server application built in Rust (Tokio) to track clients' real-time positions. Benchmarked on consumer-grade desktop hardware with 1 server handling 1,000 concurrent client connections, peaking at just 2.5% CPU utilization.",
-        it: "Applicazione client-server asincrona sviluppata in Rust (Tokio) per il tracciamento in tempo reale della posizione dei client. Testata su hardware desktop consumer con 1 server in grado di gestire 1.000 connessioni simultanee, con picco di CPU pari solo al 2,5%."
+        en: "Developed an asynchronous client-server application in Rust (Tokio) for real-time client location tracking. Tested on consumer desktop hardware, where a single server handled 1,000 simultaneous client connections with a peak CPU usage of 2.5%.",
+        it: "Sviluppata un'applicazione client-server asincrona in Rust (Tokio) per il tracciamento in tempo reale della posizione dei client. Testata su hardware desktop consumer dove un server è stato in grado di gestire 1.000 connessioni client simultanee con utilizzo di CPU di picco pari al 2,5%."
       },
       image: "./assets/georust.png",
       techStack: ["Rust", "Tokio", "WebSocket"],
       githubUrl: "https://github.com/amedeo03/georust"
     },
     {
+      id: "project-1",
+      title: "EZShop",
+      description: {
+        en: "Developed a REST backend for a store sales and inventory management system, built following the Waterfall model. Achieved 96% test coverage with about 650 end-to-end, integration and unit tests.",
+        it: "Sviluppato un backend REST per un sistema di gestione vendite e inventario di un negozio, realizzato applicando il modello Waterfall. Raggiunta una copertura dei test del 96% tramite circa 650 end-to-end, integration e unit test."
+      },
+      image: "./assets/ezshop.png",
+      techStack: ["Python", "FastAPI", "SQLite"],
+      githubUrl: "https://github.com/amedeo03/EZShop"
+    },
+    {
       id: "project-3",
       title: "Preventive Maintenance Tracker",
       description: {
-        en: "Preventive maintenance platform for an EV charger manufacturer's service team across ~200 sites, featuring intervention scheduling, automated email alerts, and Dockerized production deployment on Hetzner VPS.",
-        it: "Piattaforma di manutenzione preventiva per il team di assistenza di un produttore di impianti di ricarica EV (~200 siti), con pianificazione degli interventi, notifiche email ai tecnici e infrastruttura Docker su VPS Hetzner."
+        en: "Designed and implemented a maintenance management platform for the support team of electric vehicle charging stations, with scheduling of interventions and tracking of completed work. Independently deployed and managed the production infrastructure: containerized services hosted on a Hetzner VPS, with TLS encryption provided by Cloudflare and Certbot; received positive feedback from employees, although not yet formally adopted.",
+        it: "Progettata ed implementata una piattaforma di gestione della manutenzione per il team di assistenza di impianti di ricarica di veicoli elettrici, con pianificazione degli interventi e tracciamento del lavoro svolto. Distribuita e gestita in autonomia l'infrastruttura di produzione: servizi containerizzati installati su VPS Hetzner, con crittografia TLS gestita tramite Cloudflare e Certbot: ricevuti riscontri positivi dai dipendenti, sebbene non ancora adottata formalmente."
       },
       image: "./assets/preventive_maintenance.png",
       techStack: ["Python", "FastAPI", "PostgreSQL", "Streamlit", "Docker"]
@@ -237,17 +240,6 @@ export const portfolioConfig = {
       image: "./assets/beansight.jpg",
       techStack: ["React", "TypeScript", "Python", "Pandas"],
       githubUrl: "https://github.com/lisagiacob/LavazzaChallenge"
-    },
-    {
-      id: "project-1",
-      title: "EZShop",
-      description: {
-        en: "FastAPI backend REST server with a relational (SQLite) database for a small market's order and inventory system, developed using the Waterfall model. Achieved 96% test coverage across ~650 unit, integration, and end-to-end tests.",
-        it: "Backend REST in FastAPI con database relazionale (SQLite) per un sistema di gestione ordini e magazzino per un piccolo market, realizzato con modello Waterfall. Copertura dei test del 96% su ~650 test unitari, di integrazione ed end-to-end."
-      },
-      image: "./assets/ezshop.png",
-      techStack: ["Python", "FastAPI", "SQLite"],
-      githubUrl: "https://github.com/amedeo03/EZShop"
     },
     {
       id: "project-0",
@@ -289,7 +281,9 @@ export const portfolioConfig = {
       projects: {
         viewDemo: "Live Preview",
         viewGithub: "View Source",
-        privateRepo: "Private Repository"
+        privateRepo: "Private Repository",
+        openDetails: "Open project details",
+        closeDetails: "Close project details"
       },
       contact: {
         directContact: "Direct Contact Info",
@@ -336,7 +330,9 @@ export const portfolioConfig = {
       projects: {
         viewDemo: "Anteprima Live",
         viewGithub: "Codice Sorgente",
-        privateRepo: "Repository Privata"
+        privateRepo: "Repository Privata",
+        openDetails: "Apri i dettagli del progetto",
+        closeDetails: "Chiudi i dettagli del progetto"
       },
       contact: {
         directContact: "Informazioni di Contatto Diretto",

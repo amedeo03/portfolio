@@ -47,7 +47,7 @@ export const Hero = () => {
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-black text-white border border-white/20 font-semibold shadow-lg shadow-black/30 hover:bg-white hover:text-black hover:border-white hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 <span>{t('hero.ctaProjects')}</span>
                 <ArrowRight className="w-4 h-4" />
